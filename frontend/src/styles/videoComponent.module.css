@@ -1,0 +1,144 @@
+.meetVideoContainer {
+    position: relative;
+    height: 100vh;
+    background: rgb(1, 4, 48);
+}
+
+.meetUserVideo {
+    position: absolute;
+    bottom: 10vh;
+    height: 20vh;
+    width: auto;
+    left: 0;
+    border-radius: 20px;
+}
+
+.buttonContainers {
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    text-align: center;
+}
+
+.buttonContainers svg {
+    font-size: 3rem;
+}
+
+.conferenceView { 
+
+    display: flex;
+    
+    padding: 10px;
+    gap: 10px;
+}
+
+.conferenceView  video {
+    width: 40vw;
+    height: 20vh;
+    min-width: 30vw;
+    border-radius: 10px;
+}
+
+.chatRoom {
+    position: absolute;
+    height: 90vh;
+    right: 0;
+    background: white;
+    border-radius: 10px;
+    width: 30vw;
+    padding-inline: 20px;
+}
+
+.chatContainer {
+    position: relative;
+    height: 100%;
+}
+
+
+.chattingArea {
+    position: absolute;
+    bottom: 0;
+}
+/* Styling on video preview */
+.meetContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  gap: 20px;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+/* Video container — responsive, keeps aspect ratio */
+.videoPreview {
+  width: 90vw;
+  max-width: 600px;
+  box-sizing: border-box;
+  /* keep some breathing room below the video so inputs never overlap */
+  margin-bottom: 12px;
+}
+
+/* Use aspect-ratio and let browser calculate height */
+.videoPreview video {
+  width: 100%;           /* take full width of container */
+  aspect-ratio: 1.25 / 1;   /* makes it a perfect square */
+  height: auto;          /* let browser calculate */
+  border-radius: 10px;
+  background: #000;
+  object-fit: cover;     /* ensures the video fills the square */
+}
+
+
+/* Textfield + Button on same line on wide screens */
+.inputRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  width: 90vw;            /* scale with viewport */
+  max-width: 500px;       /* match video max width */
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 6px 0;
+}
+
+/* Make the TextField take remaining space and button fixed */
+.inputRow .MuiTextField-root,
+.inputRow input {
+  flex: 1 1 auto;         /* grow/shrink as needed */
+  min-width: 0;           /* allow shrinking inside flex container */
+}
+
+.inputRow .connectBtn {
+  flex: 0 0 auto;         /* don't grow — keep button natural size */
+  white-space: nowrap;
+}
+
+/* SMALL SCREENS: stack inputs under each other */
+@media (max-width: 600px) {
+  .inputRow {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+    width: calc(100vw - 24px); /* keep little page padding */
+    max-width: 420px;
+    margin-top: 6px;
+  }
+
+  .inputRow .MuiTextField-root,
+  .inputRow input {
+    width: 100%;
+  }
+
+  .inputRow .connectBtn {
+    width: 100%;
+  }
+
+  /* Optionally reduce max-width of video on very small phones */
+  .videoPreview {
+    max-width: 420px;
+  }
+}
+
+
