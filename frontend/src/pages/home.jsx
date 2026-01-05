@@ -26,7 +26,7 @@ function HomeComponent() {
 
                 <div style={{ display: "flex", alignItems: "center" }}>
 
-                    <h2>Indi meet</h2>
+                    <h2>Indi connect</h2>
                 </div>
 
                 <div style={{ display: "flex", alignItems: "center" }}>
