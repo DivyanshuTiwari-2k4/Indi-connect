@@ -10,7 +10,7 @@ export default function LandingPage() {
     <div className='landingPageContainer'>
       <nav>
         <div className='navHeader'>
-          <h2>Indi meet</h2>
+          <h2>Indi connect</h2>
         </div>
         <div className='navlist'>
           <p onClick={() => {
@@ -34,7 +34,7 @@ export default function LandingPage() {
         <div>
           <h1><span style={{ color: "#FF9839" }}>Connect</span> with your loved Ones</h1>
 
-          <p>Cover a distance by Indi meet</p>
+          <p>Cover a distance by Indi connect</p>
           <div role='button'>
             <Link to={"/auth"}>Get Started</Link>
           </div>
